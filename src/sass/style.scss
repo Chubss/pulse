@@ -2,4 +2,9 @@ body {
     font-family: MuesoModerno;
 }
 
-@import 'general'
+[class*="__container"] {
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+@import 'blocks/general'
