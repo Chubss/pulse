@@ -5,19 +5,17 @@
 
 
     &__content {
+        margin-top: 60px;
         display: flex;
         justify-content: space-between;
-        align-items: flex-start;
     }
 
     &__item {
-        margin-top: 60px;
-        width: 250px;
+        max-width: 237px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-        img {
-            display: block;
-            margin: 0 auto;
-        }
     }
 
     &__header {
@@ -37,8 +35,9 @@
         text-align: center;
         color: #0D0D0D;
 
-        span {
+        a {
             color: #FF0000;
+            text-decoration: underline;
         }
     }
 }
