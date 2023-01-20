@@ -3,7 +3,78 @@
     background: url("../../img/bg/promo_bg.jpg") center center / cover no-repeat;
     padding: 22px 0 93px;
 
-    &__container {}
 
-    &__header {}
+    &__wrapper {
+        margin-top: 96px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    &__header {
+        font-weight: 700;
+        font-size: 42px;
+        line-height: 42px;
+        text-align: right;
+        text-transform: uppercase;
+        color: #FFFFFF;
+    }
+
+    &__subheader {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 24px;
+        text-align: right;
+        text-transform: uppercase;
+        color: #FFFFFF;
+    }
+
+    &__icons {
+        margin-top: 60px;
+        width: 424px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__icon {
+        min-width: 106px;
+        margin: 0 auto;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 14px;
+        text-align: center;
+        color: #FFFFFF;
+
+        img {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+
+
+    }
+
+    &__btn {
+        margin-top: 65px;
+    }
+
+    &__link {
+        margin-top: 10px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 25px;
+        color: #FFFFFF;
+
+        a {
+            color: #FFFFFF;
+            text-decoration: none;
+            text-transform: uppercase;
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+        }
+    }
 }
