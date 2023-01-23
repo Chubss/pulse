@@ -1,6 +1,7 @@
 .catalogue {
-    min-height: 944px;
+    // min-height: 944px;
     padding-bottom: 79px;
+
     &__tabs {
         padding: 0;
         margin: 0 auto;
@@ -13,6 +14,7 @@
         column-gap: 10px;
 
     }
+
     // .catalogue__tab
     &__tab {
         // display: flex;
@@ -31,34 +33,51 @@
         transform: skew(-25deg);
         cursor: pointer;
         transition: all .3s;
-        &:hover{
+
+        &:hover {
             box-shadow: 3px 3px 20px $btn_color;
             border: none;
         }
-        span{
+
+        span {
             display: block;
             transform: skew(25deg);
         }
-        &_active{
+
+        &_active {
             background-color: $btn_color;
             border: none;
             color: #ffffff;
         }
-            }
-    &__content{
-        margin-top: 60px;
     }
+
+    &__content {
+        margin-top: 60px;
+        display: none;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        &_active {
+            display: flex;
+        }
+
+    }
+
     .catalogue-item {
+        position: relative;
         width: 303px;
         min-height: 442px;
         border: 2px solid #E8E8E8;
         padding: 20px 20px;
+        overflow: hidden;
+
         &__img {
             display: block;
             margin: 0 auto;
             max-width: 100%;
             height: 200px;
         }
+
         // .catalogue-item__subtitle
         &__subtitle {
             margin-top: 20px;
@@ -67,6 +86,7 @@
             font-size: 16px;
             color: #0D0D0D;
         }
+
         // .catalogue-item__descr
         &__descr {
             margin-top: 15px;
@@ -76,6 +96,7 @@
             text-align: center;
             color: #0D0D0D;
         }
+
         // .catalogue-item__link
         &__link {
             display: block;
@@ -83,22 +104,26 @@
             font-weight: 500;
             font-size: 14px;
             text-align: center;
+            text-transform: uppercase;
             color: #C70101;
         }
-        hr{
+
+        hr {
             margin: 17px 0;
             background-color: #E8E8E8;
             border-bottom: none;
         }
+
         // .catalogue-item__footer
         &__footer {
             display: flex;
             justify-content: space-between;
 
         }
+
         // .catalogue-item__prices
-        &__prices {
-        }
+        &__prices {}
+
         // .catalogue-item__old-price
         &__old-price {
             font-weight: 300;
@@ -106,6 +131,7 @@
             text-decoration-line: line-through;
             color: #555555;
         }
+
         // .catalogue-item__new-price
         &__new-price {
             margin-top: 2px;
@@ -115,6 +141,77 @@
             color: #050505;
 
         }
-}
-}
 
+        &__wrapper {
+            display: flex;
+            width: calc(200% + 40px);
+        }
+
+        &__content {
+            width: 50%;
+            margin-right: 0px;
+            transform: translateX(-100%);
+            padding-right: 20px;
+            transition: all .5s;
+
+            &_active {
+                transform: translateX(0%);
+                margin-right: 20px;
+                padding-right: 0;
+            }
+        }
+
+        &__list {
+            position: relative;
+            width: 50%;
+            margin-left: 20px;
+            transform: translateX(0%);
+            padding-right: 20px;
+            transition: all .5s;
+            list-style-type: none;
+            padding-left: 19px;
+            margin-bottom: 0;
+
+            li {
+                position: relative;
+                font-weight: 300;
+                font-size: 14px;
+                line-height: 21px;
+                color: #555555;
+                margin-bottom: 10px;
+
+                &::before {
+                    content: '';
+                    width: 8px;
+                    height: 7px;
+                    display: block;
+                    position: absolute;
+                    left: -17px;
+                    top: 5px;
+                    background-color: $btn_color;
+                    z-index: 5;
+                }
+            }
+
+            &_active {
+                transform: translateX(-100%);
+                margin-left: 0px;
+            }
+
+        }
+
+        &__back {
+            display: block;
+            font-weight: 500;
+            font-size: 14px;
+            text-align: center;
+            text-decoration-line: underline;
+            text-transform: uppercase;
+            color: #C70101;
+            position: absolute;
+            left: 50%;
+            transform: translateX(calc(-50% - 8px));
+            bottom: 0px;
+        }
+    }
+}
