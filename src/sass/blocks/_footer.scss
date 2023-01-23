@@ -1,16 +1,16 @@
 .footer {
     position: relative;
-    height: 630px;
+    min-height: 630px;
 
-    &__map {
-        iframe {
-            margin: 0;
-            padding: 0;
-        }
+    // &__map {
+    //     iframe {
+    //         margin: 0;
+    //         padding: 0;
+    //     }
 
-        margin: 0;
-        padding: 0;
-    }
+    //     margin: 0;
+    //     padding: 0;
+    // }
 
     &__info {
         position: absolute;
@@ -59,6 +59,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        img{
+            height: 27px;
+        }
     }
 
 }
