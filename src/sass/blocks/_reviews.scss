@@ -1,0 +1,44 @@
+.reviews {
+    padding-bottom: 26px;
+
+
+    &__wrapper {
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 60px;
+    }
+
+    &__item {
+        display: flex;
+        column-gap: 60px;
+    }
+
+    &__img {
+        width: 169px;
+        height: 169px;
+
+    }
+
+
+    &__header {
+        font-weight: 700;
+        font-size: 18px;
+        color: #0D0D0D;
+    }
+
+    &__subheader {
+        font-weight: 500;
+        font-size: 14px;
+        color: #646464;
+    }
+
+    &__descr {
+        max-width: 680px;
+        margin-top: 10px;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 24px;
+        color: #0D0D0D;
+    }
+}
