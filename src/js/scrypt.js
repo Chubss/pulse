@@ -40,6 +40,34 @@ $(document).ready(function () {
         $(this).on('click', function () {
             $('#order .modal__descr').text($('.catalogue-item__subtitle').eq(i).text());
             $('.overlay, #order').fadeIn('slow');
-        })
+        });
     });
+
+
+    function validateForms(form) {
+        $(form).validate({
+            rules: {
+                // simple rule, converted to {required:true}
+                name: "required",
+                phone: "required",
+                // compound rule
+                email: {
+                    required: true,
+                    email: true
+                }
+            },
+            messages: {
+                name: "Please specify your name",
+                email: {
+                    required: "We need your email address to contact you",
+                    email: "Your email address must be in the format of name@domain.com"
+                }
+            },
+        });
+    }
+    validateForms('#consultation form');
+    validateForms('.consultation__form');
+    validateForms('#order form');
+
+
 });

@@ -6,6 +6,7 @@
     top: 0;
     background-color: rgba(0, 0, 0, 0.4);
 }
+
 .modal {
     top: 50%;
     left: 50%;
@@ -15,11 +16,11 @@
     min-height: 402px;
     background-color: #F2F2F2;
 
-    &_mini{
+    &_mini {
         min-height: 150px;
     }
 
-    &__close{
+    &__close {
         position: absolute;
         top: -20px;
         right: -40px;
@@ -38,6 +39,7 @@
         text-align: center;
         color: #0D0D0D;
     }
+
     // .modal__descr
     &__descr {
         padding: 0 34px;
@@ -48,16 +50,36 @@
         color: #0D0D0D;
         margin-top: 10px;
     }
+
     // .modal__form
     &__form {
         margin-top: 28px;
         // padding: 0 40px 40px 40px;
         justify-content: center;
         align-items: center;
-        }
-    
+    }
+
+    &__btn {
+        margin-bottom: 20px;
+    }
+
+    .error {
+        border: 1px solid red;
+
+
+    }
+
+    label.error {
+        border: none;
+        color: red;
+        display: block;
+        text-align: center;
+    }
+
 }
 
-#consultatilon, #order, #thanks{
+#consultatilon,
+#order,
+#thanks {
     display: none;
 }
