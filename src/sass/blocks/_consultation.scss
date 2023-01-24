@@ -19,4 +19,17 @@
             margin-top: 7px;
         }
     }
+
+    .error {
+        border: 1px solid red;
+
+
+    }
+
+    label.error {
+        border: none;
+        color: #FFFFFF;
+        display: block;
+        text-align: center;
+    }
 }
