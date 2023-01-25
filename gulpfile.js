@@ -7,6 +7,7 @@ const cleanCSS = require('gulp-clean-css');
 
 
 
+
 gulp.task('server', function () {
     browserSync.init({
         server: {
@@ -29,9 +30,9 @@ gulp.task('styles', function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch('src/sass/**/*.+(sass|scss)', gulp.parallel('styles'))
+    gulp.watch('src/sass/**/*.+(sass|scss)', gulp.parallel('styles'));
     gulp.watch("src/*.html").on('change', browserSync.reload);
 
-})
+}),
 
-gulp.task('default', gulp.parallel('server', 'styles', 'watch'))
+gulp.task('default', gulp.parallel('server', 'styles', 'watch'));
